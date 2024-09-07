@@ -14,6 +14,17 @@ public enum PreferredIde
     Notepad = 5,
     VisualStudio = 6,
 }
+[EnumAsInt]
+public enum GermanyTaxProficiency
+{
+    IsVatTheNameOfAClub=0, // "VAT? Is That a New Diet?"
+    BrexitLevel=1, //VAT has something to do with "pounds" and "tea."
+    HopingItLikeItaly=2, //Thinks they can casually wave away tax paperwork with a shrug and a glass of wine
+    FrenchBureaucracySurvivor=3, //Knows their way around forms, but keeps looking for the Service Public to help with their German taxes.
+    AustrianBureaucrat=4, //Might as well be in Vienna; they can navigate the intricate maze of taxes and bureaucracy easily 
+    ActuallyLivesInGermany=5, // Actual German
+    GermanTaxAuditor=6 //"German Tax Sensei"
+}
 
 public class ApplicationUser : IdentityUser
 {
@@ -26,6 +37,8 @@ public class ApplicationUser : IdentityUser
     public PreferredIde PreferredIde { get; set; }
 
 
+    
+    
     public decimal CocaineTolerance { get; set; }
     [MaxLength(512)] public string? GoogleUserId { get; set; }
     [MaxLength(512)] public string? GoogleProfilePageUrl { get; set; }
